@@ -5,15 +5,60 @@ export function WorkshopGallary() {
   
   // Complete gallery images - expanded from the original set
   const galleryImages = [
-    { id: 1, url: "/pics/1t.png", caption: "Workshop Session 1" },
-    { id: 2, url: "/pics/t2.png", caption: "Group Activity" },
-    { id: 3, url: "/pics/t3.png", caption: "Final Presentation" },
-    { id: 4, url: "/pics/cyvawg-6.jpg", caption: "Workshop Activity" },
-    { id: 5, url: "/pics/cyvawg-12.jpg", caption: "Group Discussion" },
-    { id: 6, url: "/pics/cyvawg-43.jpg", caption: "Presentation Session" },
-    { id: 7, url: "/pics/cyvawg-44.jpg", caption: "Q&A Session" },
-    { id: 8, url: "/pics/cyvawg-45.jpg", caption: "Team Exercise" },
-    { id: 9, url: "/pics/cyvawg-46.jpg", caption: "Final Presentation" }
+    { id: 1, url: "/gallery image/cyvawg-1.jpg" },
+    { id: 2, url: "/gallery image/cyvawg-2.jpg" },
+    { id: 3, url: "/gallery image/cyvawg-3.jpg" },
+    { id: 4, url: "/gallery image/cyvawg-4.jpg" },
+    { id: 5, url: "/gallery image/cyvawg-5.jpg" },
+    { id: 6, url: "/gallery image/cyvawg-6.jpg" },
+    { id: 7, url: "/gallery image/cyvawg-7.jpg" },
+    { id: 8, url: "/gallery image/cyvawg-8.jpg" },
+    { id: 9, url: "/gallery image/cyvawg-9.jpg" },
+    { id: 10, url: "/gallery image/cyvawg-10.jpg" },
+    { id: 11, url: "/gallery image/cyvawg-11.jpg" },
+    { id: 12, url: "/gallery image/cyvawg-12.jpg" },
+    { id: 13, url: "/gallery image/cyvawg-13.jpg" },
+    { id: 14, url: "/gallery image/cyvawg-14.jpg" },
+    { id: 15, url: "/gallery image/cyvawg-15.jpg" },
+    { id: 16, url: "/gallery image/cyvawg-16.jpg" },
+    { id: 17, url: "/gallery image/cyvawg-17.jpg" },
+    { id: 18, url: "/gallery image/cyvawg-18.jpg" },
+    { id: 19, url: "/gallery image/cyvawg-19.jpg" },
+    { id: 20, url: "/gallery image/cyvawg-20.jpg" },
+    { id: 21, url: "/gallery image/cyvawg-21.jpg" },
+    { id: 22, url: "/gallery image/cyvawg-22.jpg" },
+    { id: 23, url: "/gallery image/cyvawg-23.jpg" },
+    { id: 24, url: "/gallery image/cyvawg-24.jpg" },
+    { id: 25, url: "/gallery image/cyvawg-25.jpg" },
+    { id: 26, url: "/gallery image/cyvawg-26.jpg" },
+    { id: 27, url: "/gallery image/cyvawg-27.jpg" },
+    { id: 28, url: "/gallery image/cyvawg-28.jpg" },
+    { id: 29, url: "/gallery image/cyvawg-29.jpg" },
+    { id: 30, url: "/gallery image/cyvawg-30.jpg" },
+    { id: 31, url: "/gallery image/cyvawg-31.jpg" },
+    { id: 32, url: "/gallery image/cyvawg-32.jpg" },
+    { id: 33, url: "/gallery image/cyvawg-33.jpg" },
+    { id: 34, url: "/gallery image/cyvawg-34.jpg" },
+    { id: 35, url: "/gallery image/cyvawg-35.jpg" },
+    { id: 36, url: "/gallery image/cyvawg-36.jpg" },
+    { id: 37, url: "/gallery image/cyvawg-37.jpg" },
+    { id: 38, url: "/gallery image/cyvawg-38.jpg" },
+    { id: 39, url: "/gallery image/cyvawg-39.jpg" },
+    { id: 40, url: "/gallery image/cyvawg-40.jpg" },
+    { id: 41, url: "/gallery image/cyvawg-41.jpg" },
+    { id: 42, url: "/gallery image/cyvawg-42.jpg" },
+    { id: 43, url: "/gallery image/cyvawg-43.jpg" },
+    { id: 44, url: "/gallery image/cyvawg-44.jpg" },
+    { id: 45, url: "/gallery image/cyvawg-45.jpg" },
+    { id: 46, url: "/gallery image/cyvawg-46.jpg" },
+    { id: 47, url: "/gallery image/cyvawg-47.jpg" },
+    { id: 48, url: "/gallery image/cyvawg-48.jpg" },
+    { id: 49, url: "/gallery image/cyvawg-49.jpg" },
+    { id: 50, url: "/gallery image/cyvawg-50.jpg" },
+    { id: 51, url: "/gallery image/cyvawg-51.jpg" },
+    { id: 52, url: "/gallery image/cyvawg-52.jpg" },
+    { id: 53, url: "/gallery image/cyvawg-53.jpg" },
+    { id: 54, url: "/gallery image/cyvawg-54.jpg" },
   ];
   
   // Function to handle image click for lightbox
@@ -41,7 +86,7 @@ export function WorkshopGallary() {
           </div>
           
           {/* Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
             {galleryImages.map((image) => (
               <div 
                 key={image.id} 
@@ -51,15 +96,11 @@ export function WorkshopGallary() {
                 <div className="aspect-w-4 aspect-h-3">
                   <img 
                     src={image.url}
-                    alt={image.caption || `Workshop image ${image.id}`}
+                    alt="workshop image"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                {image.caption && (
-                  <div className="p-4">
-                   
-                  </div>
-                )}
+     
               </div>
             ))}
           </div>
