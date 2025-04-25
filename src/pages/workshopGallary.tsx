@@ -57,7 +57,7 @@ export function WorkshopGallary() {
                 </div>
                 {image.caption && (
                   <div className="p-4">
-                    <p className="text-gray-800 font-medium text-center">{image.caption}</p>
+                   
                   </div>
                 )}
               </div>
