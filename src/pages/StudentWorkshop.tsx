@@ -10,11 +10,11 @@ console.log("Current page:", currentPage);
   const pdfFile = "/pdf/1.pdf";
 
   // Workshop images
-  const workshopImages = [
-    { id: 1, url: "/pics/1t.png", caption: "Workshop Session 1" },
-    { id: 2, url: "/pics/t2.png", caption: "Group Activity" },
-    { id: 3, url: "/pics/t3.png", caption: "Final Presentation" },
-  ];
+  // const workshopImages = [
+  //   { id: 1, url: "/pics/1t.png", caption: "Workshop Session 1" },
+  //   { id: 2, url: "/pics/t2.png", caption: "Group Activity" },
+  //   { id: 3, url: "/pics/t3.png", caption: "Final Presentation" },
+  // ];
   
   // Check if PDF is loaded
   useEffect(() => {
@@ -107,7 +107,7 @@ console.log("Current page:", currentPage);
 
  
           {/* One image per row */}
-          <div className="space-y-6">
+          {/* <div className="space-y-6">
             {workshopImages.map((image) => (
               <div key={image.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img 
@@ -117,7 +117,7 @@ console.log("Current page:", currentPage);
                 />
               </div>
             ))}
-          </div>
+          </div> */}
 
 
           <div className="mt-12 bg-white rounded-lg shadow-lg p-6">

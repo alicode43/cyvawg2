@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { Mail, MapPin, Linkedin, Instagram, Phone } from 'lucide-react';
 import { Navigation } from './components/Navigation';
