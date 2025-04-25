@@ -69,7 +69,7 @@ function App() {
               <ul className="space-y-2">
                 <li><a href="#" className="hover:opacity-80">Emergency Support</a></li>
                 <li><a href="#" className="hover:opacity-80">Report Abuse</a></li>
-                <li><Link to="/gallery" className="hover:opacity-80">Photo Gallery</Link></li>
+                {/* <li><Link to="/gallery" className="hover:opacity-80">Photo Gallery</Link></li> */}
                 <li><a href="#" className="hover:opacity-80">Privacy Policy</a></li>
                 <li><a href="#" className="hover:opacity-80">Terms of Service</a></li>
               </ul>

@@ -105,19 +105,111 @@ console.log("Current page:", currentPage);
             </div>
           </div>
 
- 
-          {/* One image per row */}
-          {/* <div className="space-y-6">
-            {workshopImages.map((image) => (
-              <div key={image.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img 
-                  src={image.url}
-                  alt={`Workshop image ${image.id}`}
-                  className="w-full object-cover"
-                />
-              </div>
-            ))}
+ <div>
+ <div className="mt-12 bg-white rounded-lg shadow-lg p-6">
+  <h2 className="text-2xl font-bold text-purple-900 mb-4">Workshop Video</h2>
+  <p className="text-gray-700 leading-relaxed mb-6">
+    Watch our recorded workshop session to get a better understanding of the topics covered and activities performed.
+  </p>
+  
+  {/* Responsive YouTube embed */}
+  <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-md">
+  <iframe 
+    className="absolute top-0 left-0 w-full h-full"
+    src="https://www.youtube.com/embed/nZTNwCVTgHA" 
+    title="Workshop Recording"
+    frameBorder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen>
+  </iframe>
+</div>
+
+<br />
+<br />
+  <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-md">
+  <iframe 
+    className="absolute top-0 left-0 w-full h-full"
+    src="https://www.youtube.com/embed/eH5xtEoFx0U?si=65bBr5TeQ_Q9UcG3" 
+    title="Workshop Recording"
+    frameBorder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen>
+  </iframe>
+</div>
+  
+
+</div>
+ </div>
+
+ <div>
+{/* LinkedIn Article Preview Section */}
+<div className="mt-12 bg-white rounded-lg shadow-lg p-6">
+  <h2 className="text-2xl font-bold text-purple-900 mb-4">Related Resource</h2>
+  <p className="text-gray-700 leading-relaxed mb-6">
+    Check out this insightful LinkedIn article related to our workshop topic:
+  </p>
+  
+  {/* LinkedIn Post Preview Card */}
+  <a 
+    href="https://www.linkedin.com/pulse/unmasking-cyber-violence-urgent-need-action-anitha-chinnaswamy-jgrce/?trackingId=9Deqm1DGQCKHi8LcKcvSxw%3D%3D" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="block"
+  >
+    <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+      {/* LinkedIn Header */}
+      <div className="bg-[#0077b5] p-3 flex items-center">
+        <svg className="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+        <span className="ml-2 text-white font-medium">LinkedIn Article</span>
+      </div>
+      
+      {/* Preview Content */}
+      <div className="p-4">
+        <div className="flex items-start">
+          {/* <div className="h-12 w-12 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden">
+            <img 
+              src="https://media.licdn.com/dms/image/D4E03AQE6VYoZSkC9dw/profile-displayphoto-shrink_100_100/0/1683538625518?e=1730332800&v=beta&t=em_An272QIa9JTdlUSPZ2l6ShFmgazWS2KQHAztfeh8" 
+              alt="Anitha Chinnaswamy" 
+              className="h-full w-full object-cover"
+            />
           </div> */}
+          <div className="ml-3">
+            <p className="font-semibold text-gray-900">Anitha Chinnaswamy</p>
+            <p className="text-sm text-gray-500">Associate Professor | Digital Trust & Cybersecurity | DEI Researcher</p>
+          </div>
+        </div>
+        
+        <h3 className="mt-4 font-bold text-xl text-gray-900">Unmasking Cyber Violence: The Urgent Need for Action</h3>
+        
+        <p className="mt-2 text-gray-700 line-clamp-3">
+          In today's digital landscape, cyber violence has emerged as a significant threat, particularly affecting women and girls. This article explores the urgent need for comprehensive approaches to combat online harassment, digital safety education, and policy interventions.
+        </p>
+        
+        {/* <div className="mt-4">
+          <div className="aspect-w-16 aspect-h-9 bg-gray-100 rounded overflow-hidden">
+            <img 
+              src="https://media.licdn.com/dms/image/D4E12AQHjn7QYD-jQow/article-cover_image-shrink_600_2000/0/1691498246008?e=2147483647&v=beta&t=njfvt2NEhaHJur-xXDgGJVoq3lAvgGcrGPaB-jWdZgo" 
+              alt="Cyber Violence Article Cover" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div> */}
+        
+        <div className="mt-4 flex items-center text-gray-500">
+          <span>Read the full article on LinkedIn</span>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+ </div>
+
 
 
           <div className="mt-12 bg-white rounded-lg shadow-lg p-6">

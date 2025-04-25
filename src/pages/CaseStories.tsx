@@ -1,51 +1,95 @@
 import React, { useState } from 'react';
 import { Download, ChevronDown, ChevronUp } from 'lucide-react';
 
+// const caseStories = [
+//   {
+//     id: 1,
+//     title: "Samantha Billingham – A Survivor's Journey and Advocacy Against Cyber-Enabled Domestic Abuse",
+//     preview: "Samantha Billingham's journey from victim to advocate highlights the urgent need for digital safety, early abuse recognition, and stronger support systems against tech-facilitated coercive control.",
+//     description: "Samantha Billingham details her transformative journey from enduring covert, technology-facilitated abuse to emerging as a resilient advocate for survivors. Her experience highlights the subtle, yet pervasive nature of coercive control, where digital tools are misused to isolate and manipulate, resulting in significant psychological and emotional impacts. Through her personal narrative, Samantha underscores the critical need for early recognition of abuse and the importance of supportive interventions. Her development of the ABC Toolkit stands as a practical resource, empowering others to identify red flags and seek help. This case study is a compelling call to action for improved legal protections, comprehensive digital safety education, and robust support systems for those affected by cyber-enabled domestic abuse.",
+//     downloadUrl: "/cases/case1.pdf"
+//   },
+//   {
+//     id: 2,
+//     title: "Nina Jane Patel",
+//     preview: "Implementation of digital safety education programs in universities to protect female students from cyber violence.",
+//     description: "Psychotherapist and metaverse researcher Nina Jane Patel was sexually assaulted by male avatars within minutes of entering Meta’s Horizon Worlds VR platform. Despite the immersive trauma—triggering panic attacks and professional repercussions—Meta dismissed the incident as non-consensual imagery, not rape, and took no action. Patel faced victim-blaming and found no legal recourse, as virtual assault lacks evidentiary frameworks and legal recognition. Her case exposes systemic failures: VR platforms lack moderation, reporting tools, and accountability, while laws lag behind tech-enabled abuse. Patel now advocates for VR safety reforms, underscoring the urgent need for platform accountability, trauma-informed policies, and legal updates to address virtual violence as a real-world harm.",
+//     downloadUrl: "/cases/case2.pdf"
+//   },
+//   {
+//     id: 3,
+//     title: "Hannah Moore",
+//     preview: "Strategies and tools for protecting women and girls from harassment and abuse on social media platforms.",
+//     description: "Fashion designer Hannah Moore met Kin Hung at London Fashion Week, which led to a years-long cyberstalking campaign against her. The offender used her personal information to arrange identity theft, harassment, and threats. Despite extensive evidence, UK police failed to act. Moore's life was deeply affected, revealing systemic flaws in addressing digital gender-based violence. The case was exposed by journalist Carole Cadwalladr in the 'Stalked' podcast. It revealed how digital abuse is often dismissed compared to physical stalking. Moore's experience calls for urgent reforms in law enforcement training, cyberstalking legislation, and platform accountability to protect women online.",
+//     downloadUrl: "/cases/case3.pdf"
+//   },
+//   {
+//     id: 4,
+//     title: "Honey cook",
+//     preview: "Strategies and tools for protecting women and girls from harassment and abuse on social media platforms.",
+//     description: "Unrelenting cyberbullying by strangers ended the life of 15-year-old Honey Cook in 2021; her mother, Gemma Bentley, was unaware of the abuse until it was too late on her phone. Devastated but resolute, Gemma used her sorrow to launch Bee Kind for Honey, a nonprofit organization that addresses cyberbullying and promotes the mental health of young people. ...",
+//     downloadUrl: "/cases/case4.pdf"
+//   },
+//   {
+//     id: 5,
+//     title: "Carla Denyer",
+//     preview: "Strategies and tools for protecting women and girls from harassment and abuse on social media platforms.",
+//     description: "In 2021, Carla Denyer became co-leader of the Green Party, becoming the first openly bisexual woman to run a major English political party. ...",
+//     downloadUrl: "/cases/case5.pdf"
+//   },
+//   {
+//     id: 6,
+//     title: "Nicola Thorp",
+//     preview: "Implementation of digital safety education programs in universities to protect female students from cyber violence.",
+//     description: "In 2021, Carla Denyer became co-leader of the Green Party, making her the first openly bisexual woman to lead a major English political party. ...",
+//     downloadUrl: "/cases/case6.pdf"
+//   }
+// ];
+
 const caseStories = [
   {
     id: 1,
     title: "Samantha Billingham – A Survivor's Journey and Advocacy Against Cyber-Enabled Domestic Abuse",
-    preview: "Samantha Billingham's journey from victim to advocate highlights the urgent need for digital safety, early abuse recognition, and stronger support systems against tech-facilitated coercive control.",
+    preview: "From abuse victim to advocate against tech-facilitated coercive control.",
     description: "Samantha Billingham details her transformative journey from enduring covert, technology-facilitated abuse to emerging as a resilient advocate for survivors. Her experience highlights the subtle, yet pervasive nature of coercive control, where digital tools are misused to isolate and manipulate, resulting in significant psychological and emotional impacts. Through her personal narrative, Samantha underscores the critical need for early recognition of abuse and the importance of supportive interventions. Her development of the ABC Toolkit stands as a practical resource, empowering others to identify red flags and seek help. This case study is a compelling call to action for improved legal protections, comprehensive digital safety education, and robust support systems for those affected by cyber-enabled domestic abuse.",
     downloadUrl: "/cases/case1.pdf"
   },
   {
     id: 2,
     title: "Nina Jane Patel",
-    preview: "Implementation of digital safety education programs in universities to protect female students from cyber violence.",
-    description: "Psychotherapist and metaverse researcher Nina Jane Patel was sexually assaulted by male avatars within minutes of entering Meta’s Horizon Worlds VR platform. Despite the immersive trauma—triggering panic attacks and professional repercussions—Meta dismissed the incident as non-consensual imagery, not rape, and took no action. Patel faced victim-blaming and found no legal recourse, as virtual assault lacks evidentiary frameworks and legal recognition. Her case exposes systemic failures: VR platforms lack moderation, reporting tools, and accountability, while laws lag behind tech-enabled abuse. Patel now advocates for VR safety reforms, underscoring the urgent need for platform accountability, trauma-informed policies, and legal updates to address virtual violence as a real-world harm.",
+    preview: "VR sexual assault victim fighting for platform accountability.",
+    description: "Psychotherapist and metaverse researcher Nina Jane Patel was sexually assaulted by male avatars within minutes of entering Meta's Horizon Worlds VR platform. Despite the immersive trauma—triggering panic attacks and professional repercussions—Meta dismissed the incident as non-consensual imagery, not rape, and took no action. Patel faced victim-blaming and found no legal recourse, as virtual assault lacks evidentiary frameworks and legal recognition. Her case exposes systemic failures: VR platforms lack moderation, reporting tools, and accountability, while laws lag behind tech-enabled abuse. Patel now advocates for VR safety reforms, underscoring the urgent need for platform accountability, trauma-informed policies, and legal updates to address virtual violence as a real-world harm.",
     downloadUrl: "/cases/case2.pdf"
   },
   {
     id: 3,
     title: "Hannah Moore",
-    preview: "Strategies and tools for protecting women and girls from harassment and abuse on social media platforms.",
+    preview: "Designer faced cyberstalking with zero police action.",
     description: "Fashion designer Hannah Moore met Kin Hung at London Fashion Week, which led to a years-long cyberstalking campaign against her. The offender used her personal information to arrange identity theft, harassment, and threats. Despite extensive evidence, UK police failed to act. Moore's life was deeply affected, revealing systemic flaws in addressing digital gender-based violence. The case was exposed by journalist Carole Cadwalladr in the 'Stalked' podcast. It revealed how digital abuse is often dismissed compared to physical stalking. Moore's experience calls for urgent reforms in law enforcement training, cyberstalking legislation, and platform accountability to protect women online.",
     downloadUrl: "/cases/case3.pdf"
   },
   {
     id: 4,
     title: "Honey cook",
-    preview: "Strategies and tools for protecting women and girls from harassment and abuse on social media platforms.",
+    preview: "Teen suicide from cyberbullying leads to mother's advocacy.",
     description: "Unrelenting cyberbullying by strangers ended the life of 15-year-old Honey Cook in 2021; her mother, Gemma Bentley, was unaware of the abuse until it was too late on her phone. Devastated but resolute, Gemma used her sorrow to launch Bee Kind for Honey, a nonprofit organization that addresses cyberbullying and promotes the mental health of young people. ...",
     downloadUrl: "/cases/case4.pdf"
   },
   {
     id: 5,
     title: "Carla Denyer",
-    preview: "Strategies and tools for protecting women and girls from harassment and abuse on social media platforms.",
+    preview: "First openly bisexual woman to lead a major English party.",
     description: "In 2021, Carla Denyer became co-leader of the Green Party, becoming the first openly bisexual woman to run a major English political party. ...",
     downloadUrl: "/cases/case5.pdf"
   },
   {
     id: 6,
     title: "Nicola Thorp",
-    preview: "Implementation of digital safety education programs in universities to protect female students from cyber violence.",
+    preview: "Public figure facing severe online harassment and threats.",
     description: "In 2021, Carla Denyer became co-leader of the Green Party, making her the first openly bisexual woman to lead a major English political party. ...",
     downloadUrl: "/cases/case6.pdf"
   }
 ];
-
 export function CaseStories() {
   const [expandedCases, setExpandedCases] = useState<number[]>([]);
 
