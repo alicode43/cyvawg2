@@ -68,28 +68,14 @@ const testimonials = [
 ];
 
 // Gallery images data
-const galleryImages = [
-  { id: 1, url: "/pics/cyvawg-6.jpg", caption: "Workshop Activity 1" },
-  { id: 2, url: "/pics/cyvawg-12.jpg", caption: "Group Discussion" },
-  { id: 3, url: "/pics/cyvawg-43.jpg", caption: "Presentation Session" },
-  { id: 4, url: "/pics/cyvawg-44.jpg", caption: "Q&A Session" },
-  { id: 5, url: "/pics/cyvawg-45.jpg", caption: "Team Exercise" },
-  { id: 6, url: "/pics/cyvawg-46.jpg", caption: "Final Presentation" }
-];
+
 
 export function Workshop() {
   const navigate = useNavigate();
-  const [selectedImage, setSelectedImage] = useState<typeof galleryImages[0] | null>(null);
+ 
 
-  // Function to handle image click
-  const handleImageClick = (image: typeof galleryImages[0]) => {
-    setSelectedImage(image);
-  };
+ 
 
-  // Function to close modal
-  const closeModal = () => {
-    setSelectedImage(null);
-  };
 
   return (
     <div className="min-h-screen bg-purple-50 py-12">
@@ -110,6 +96,25 @@ export function Workshop() {
             <div className="p-6">
               <h2 className="text-2xl font-bold" style={{ color: '#610064' }}>{workshops[0].title}</h2>
               <p className="text-gray-700 mt-4">{workshops[0].content}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* workshop 2 */}
+        <div className="mb-12">
+          <div 
+            className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105"
+            onClick={() => navigate('/gallery/student-workshop2')}
+          >
+            <img 
+              src='/pdf/w2.png'
+              // alt={workshops[1].title}
+              className="w-full h-96 object-cover"
+            />
+            <div className="p-6">
+              <h2 className="text-2xl font-bold" style={{ color: '#610064' }}>Unmasking Cyber Violence: Awareness, Action & Advocacy</h2>
+              <p className="text-gray-700 mt-4">A project focused on Cyber Violence Against Women & Girls, addressing online threats, harassment, and digital safety.
+              </p>
             </div>
           </div>
         </div>
@@ -143,72 +148,8 @@ export function Workshop() {
           ))}
         </div>
 
-        {/* Interactive Gallery Section */}
-        <div className="my-16">
-          <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#610064' }}>Workshop Gallery</h2>
-          
-          {/* Masonry-style Gallery - Limited to 3 images */}
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-            {galleryImages.slice(0, 3).map((image) => (
-              <div 
-                key={image.id}
-                className="break-inside-avoid-column cursor-pointer transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-                onClick={() => handleImageClick(image)}
-              >
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <img 
-                    src={image.url} 
-                    alt={image.caption} 
-                    className="w-full"
-                  />
-                  <div className="p-4">
-                    <p className="text-gray-800 font-medium text-center">{image.caption}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          {/* Show More Button */}
-          <div className="flex justify-center mt-8">
-            <a 
-              href="/gallery/workshop-gallery" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-md font-medium flex items-center transition-colors duration-300"
-            >
-              Show More
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </a>
-          </div>
-
-          {/* Lightbox Modal */}
-          {selectedImage && (
-            <div 
-              className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center p-4" 
-              onClick={closeModal}
-            >
-              <div className="relative max-w-5xl w-full" onClick={e => e.stopPropagation()}>
-                <button 
-                  className="absolute top-4 right-4 bg-white rounded-full p-2 text-gray-800 hover:text-purple-700 transition-colors"
-                  onClick={closeModal}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-                <img 
-                  src={selectedImage.url} 
-                  alt={selectedImage.caption}
-                  className="w-full h-auto rounded-lg"
-                />
-                <div className="bg-white p-4 rounded-b-lg">
-                  <p className="text-xl font-medium text-center text-gray-800">{selectedImage.caption}</p>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
+      
+ 
 
         {/* Video Testimonials Section */}
         <div className="mt-16">

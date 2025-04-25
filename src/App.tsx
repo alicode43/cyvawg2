@@ -16,6 +16,7 @@ import { Resources } from './pages/Resources';
 import { Gallery } from './pages/Gallery';
 import { DigitalShield } from './pages/DigitalShield';
 import { StudentWorkshop } from './pages/StudentWorkshop';
+import { StudentWorkshop2 } from './pages/StudentWorkshop2';
 import { WorkshopGallary } from './pages/workshopGallary';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/gallery/student-workshop" element={<StudentWorkshop />} />
+          <Route path="/gallery/student-workshop2" element={<StudentWorkshop2 />} />
           <Route path="/gallery/workshop-gallery" element={<WorkshopGallary />} />
         </Routes>
       </main>
