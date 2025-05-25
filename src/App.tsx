@@ -1,5 +1,5 @@
 // import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import { Mail, MapPin, Linkedin, Instagram, Phone } from 'lucide-react';
 import { Navigation } from './components/Navigation';
 import { Home } from './pages/Home';
@@ -79,7 +79,7 @@ function App() {
             <div>
               <h3 className="text-lg md:text-xl font-bold mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href="http://linkedin.com/in/anithachinnaswamy" className="hover:opacity-80">
+                <a href="http://linkedin.com/in/anithachinnaswamy" className="hover:opacity-80" target='_blank'>
                   <Linkedin className="h-6 w-6" />
                 </a>
                 <a href="#" className="hover:opacity-80">

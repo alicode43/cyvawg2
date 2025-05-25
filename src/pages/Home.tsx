@@ -5,7 +5,6 @@ export function Home() {
   const [showMore2, setShowMore2] = React.useState(false);
   const [contactMessage, setContactMessage] = React.useState("");
   const [submitted, setSubmitted] = React.useState(false);
-  const [toolkitRipple, setToolkitRipple] = React.useState(false);
 
   return (
     <>
@@ -361,9 +360,9 @@ export function Home() {
           />
           <button
             type="submit"
-            className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors w-fit self-end"
+            className="bg-[#610064] text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors w-fit self-end"
           >
-            Submit
+            Join The CyVAWG Network
           </button>
           {submitted && (
             <span className="text-green-600 font-medium">
