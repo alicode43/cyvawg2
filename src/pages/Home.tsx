@@ -223,7 +223,7 @@ export function Home() {
             The CyVAWG Toolkit is a survivor-informed digital resource offering self-assessment tools, safety strategies, and legal guidance to help individuals identify and respond to tech-facilitated abuse. It also provides clear signposting to national and local support services 
             <br />
           </p>
-          <Link to="/case-stories" className="flex">
+          <Link to="/toolkit" className="flex">
             <button className="mt-4 bg-[#610064] text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors shadow-md hover:scale-105 md:w-3/5 w-full md:absolute bottom-10 md:mx-[20%] mx-auto ">
               Know more about CyVAWG Toolkit
             </button>
