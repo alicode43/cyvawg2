@@ -1,8 +1,7 @@
 import React from "react";
 
 export function Home() {
-  const [showMore, setShowMore] = React.useState(false);
-  const [showMore2, setShowMore2] = React.useState(false);
+ 
   const [contactMessage, setContactMessage] = React.useState("");
   const [submitted, setSubmitted] = React.useState(false);
 
@@ -166,7 +165,7 @@ export function Home() {
                 non-consensual image sharing, online harassment, deepfake
                 exploitation, and abuse in immersive environments like the
                 metaverse, are increasingly prevalent. CyVAWG aimed to create
-                awareness, equip communities, and inspire action.
+                awareness, equip communities, and inspire action.
               </p>
             </div>
             <p className="text-gray-700 italic text-center max-w-3xl mx-auto">
@@ -180,9 +179,9 @@ export function Home() {
 
       {/*  cards */}
 
-      <section className="flex md:flex-row flex-col md:gap-[5%] gap-11 bg-red-50  py-12 md:py-20 md:px-0 px-6 relative  justify-center md:h-[550px] h-full">
+      <section className="flex md:flex-row flex-col md:gap-[5%] gap-11 bg-red-50  py-12 md:py-20 md:px-0 px-6 relative  justify-center lg:h-[550px] md:h-[650px] h-full">
         {/* Card 1 */}
-         <div className="md:w-[40%] p-[1%] rounded-[5%] h-full flex flex-col gap-10 shadow-lg transition-transform hover:scale-105 bg-white text-justify relative   ">    
+         <div className="md:w-[40%] md:p-[1%] p-10 rounded-[5%] h-full flex flex-col gap-10 shadow-lg transition-transform hover:scale-105 bg-white text-justify relative   ">    
           <h1 className="text-[#610064] text-2xl font-bold">Case Studies</h1>
 
           <p className="font-bold ">
@@ -198,16 +197,16 @@ export function Home() {
             Coercive control through digital surveillance <br />
             These stories centre lived experience and serve to educate
             practitioners, policymakers, and the wider public. */}
-         The Case Studies feature six anonymised real-life accounts highlighting forms of cyber violence, including deepfakes, IoT abuse, and digital stalking. These narratives centre survivor experiences to inform and educate professionals, policymakers, and the public on emerging tech-facilitated harms.
+         The Case Studies feature six anonymised real-life accounts highlighting forms of cyber violence, including deepfakes, IoT abuse, and digital stalking. These narratives centre survivor experiences to inform and educate professionals, policymakers, and the public on emerging tech-facilitated harms.
           </p>
           <a href="/case-stories" className="flex">
-            <button className="mt-4 bg-[#610064] text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors shadow-md hover:scale-105 w-3/5  md:absolute bottom-10 md:mx-[20%] mx-auto">
+            <button className="mt-4 bg-[#610064] text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors shadow-md hover:scale-105 md:w-3/5 w-full md:absolute bottom-10 md:mx-[20%] mx-auto">
               Know more about Case Studies
             </button>
           </a>
         </div>
         {/* Card 2 */}
-        <div className="md:w-[40%] p-[1%] rounded-[5%] h-full flex flex-col gap-10 shadow-lg transition-transform hover:scale-105 bg-white text-justify relative ">
+        <div className="md:w-[40%] md:p-[1%] p-10 rounded-[5%] h-full flex flex-col gap-10 shadow-lg transition-transform hover:scale-105 bg-white text-justify relative    ">
           <h1 className="text-[#610064] text-2xl font-bold">CyVAWG Toolkit</h1>
 
           <p className="font-bold ">
@@ -224,7 +223,7 @@ export function Home() {
             <br />
           </p>
           <a href="/case-stories" className="flex">
-            <button className="mt-4 bg-[#610064] text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors shadow-md hover:scale-105 w-3/5  md:absolute bottom-10 md:mx-[20%] mx-auto">
+            <button className="mt-4 bg-[#610064] text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors shadow-md hover:scale-105 md:w-3/5 w-full md:absolute bottom-10 md:mx-[20%] mx-auto ">
               Know more about CyVAWG Toolkit
             </button>
           </a>
